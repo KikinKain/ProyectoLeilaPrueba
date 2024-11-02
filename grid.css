@@ -1,0 +1,89 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px repeat(2, minmax(300px, auto)) minmax(150px, auto);
+    grid-template-areas: 
+    "   Header    Header "
+    "   Main    Main "
+    "   Main    Main "
+    "   Footer  Footer"
+    ;
+    gap:5em;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-area: Header;
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(100px, auto);
+
+    align-items: center;
+    justify-items: center;
+}
+main{
+    grid-area: Main;
+    display: grid;
+    grid-template-rows: repeat(3, minmax(150px, auto)) ;
+    gap:2em;
+    grid-template-areas: 
+    "Presentacion"
+    "Contenido"
+    "Contenido";
+}
+h2{
+    text-align: center;
+}
+#Presentacion{
+    grid-area: Presentacion;
+}
+#Contenido{
+    grid-area: Contenido;
+}
+footer{
+    grid-area:Footer;
+}
+
+footer ul{
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items:stretch ;
+    align-items: start;
+}
+
+
+#ContenedorConstancia{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(200px, auto));
+    grid-template-areas: 
+    "   Principal   Principal   Foto1   "
+    "   Foto2   Contenido   Contenido   "
+    "   Contenido2  Foto3  Foto3   "
+    ;
+    justify-items:center;
+    align-items: center;
+}
+#Imagen1ContenedorA{
+    grid-area: Foto1;
+}
+#Imagen2ContenedorA{
+    grid-area: Foto2;
+}
+#ContenedorARespuestaConstancia{
+    grid-area: Contenido;
+}
+#ContenedorAPrincipalConstancia{
+    grid-area: Principal;
+}
+#Imagen3ContenedorA{
+    grid-area: Foto3;
+}
+#TextoFinalConstancia{
+    grid-area:Contenido2;
+}
+

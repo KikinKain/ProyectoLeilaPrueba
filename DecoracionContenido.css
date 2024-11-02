@@ -1,0 +1,48 @@
+
+/*
+    Constancia
+*/
+
+.ImgContenedor{
+    width:500px;
+}
+#Imagen1ContenedorA{
+    margin:1em 0 3em 0;
+    width:350px;
+}
+#Imagen3ContenedorA{
+    width:500px;
+    margin-bottom: 2em;
+}
+#ContenedorAPrincipalConstancia{
+    display: flex;
+    flex-direction: column;
+}
+.ImagenContenidoEstilo{
+    border: 10px double brown;
+    width:400px;
+}
+#ContenedorConstancia{
+    margin:0 auto;
+    width:90%;
+}
+.ParrafoGrande{
+    font-size: 1em;
+}   
+.TextoContenedorA{
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 50px;
+    margin-bottom: 2em;
+    border: 10px double brown;
+    padding:2em;
+}
+.TituloTramite{
+    text-align: center;
+    font-size: 2.6em;
+    margin: 1em 0 1em 0;
+    width:90%;
+}
+/*
+    FIN Constancia FIN
+*/
