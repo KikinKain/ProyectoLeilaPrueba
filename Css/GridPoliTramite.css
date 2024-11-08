@@ -1,0 +1,209 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px repeat(2, minmax(300px, auto)) minmax(150px, auto);
+    grid-template-areas: 
+    "   Header    Header "
+    "   Main    Main "
+    "   Main    Main "
+    "   Footer  Footer"
+    ;
+    gap:5em;
+}
+header{
+    grid-area: Header;
+}
+main{
+    grid-area: Main;
+    display: grid;
+    grid-template-rows: repeat(3, minmax(150px, auto)) ;
+    gap:2em;
+    grid-template-areas: 
+    "Presentacion"
+    "Contenido"
+    "Contenido";
+}
+h2{
+    text-align: center;
+}
+#Presentacion{
+    grid-area: Presentacion;
+}
+#Contenido{
+    grid-area: Contenido;
+}
+footer{
+    grid-area:Footer;
+}
+
+/*      FIN GRID MAIN        */
+
+
+
+
+
+/*      CONSTANCIA    CONSTANCIA     CONSTANCIA     */
+
+.MaquetacionContenidoA{
+    font-family: Ubuntu;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(200px, auto));
+    grid-template-areas: 
+    "   Principal   Principal       Foto1   "
+    "   Foto2       Contenido       Contenido   "
+    "   Nada  Contenido2      Contenido2   "
+    ;
+    justify-items:center;
+    align-items: center;
+    gap:2em;
+}
+.Imagen1MaquetacionA{
+    grid-area: Foto1;
+}
+.Imagen2MaquetacionA{
+    grid-area: Foto2;
+}
+#ContenedorARespuestaConstancia{
+    grid-area: Contenido;
+}
+.ContenedorPrincipalMaquetacionA{
+    grid-area: Principal;
+}
+.TextoFinalMaquetacionA{
+    grid-area: Contenido2;
+}
+/*      FIN    CONSTANCIA     FIN     */
+
+
+
+
+
+/*      CARTATERMINO        CARTATERMINO        CARTATERMINO     */
+.MaquetacionContenidoAB{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(200px, auto));
+    grid-template-areas: 
+    "   Titulo      Titulo      Titulo  "
+    "   Contenido   Contenido   Foto1   "
+    "   Contenido   Contenido   Foto1    ";
+    gap:20px;
+}
+#ContenidoCartaTermino{
+    grid-area: Contenido;
+}
+#TituloCartaTermino{
+    margin-top:1em;
+    font-size: 3.5em;
+    grid-area: Titulo;
+    line-height: 1em;
+}
+#ContenedorImagenesCartaTermino{
+    grid-area: Foto1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+/*      FIN        CARTATERMINO        FIN     */
+
+@media (max-width:1440px){
+    .TextoContenedorA{
+        margin-bottom: 0em;
+        border:0;
+        padding:0;
+    }
+} 
+@media (max-width:900px){
+    .TituloTramite{
+        position: relative;
+        left: 80px;
+    }
+    .ImagenContenidoEstilo{
+        border-right:0;
+        width:95%;
+    }
+    .Imagen2MaquetacionA{
+        justify-self: start;
+        align-self: start;
+    }
+    .Imagen1MaquetacionA{
+        justify-self: start;
+        align-self: end;
+    }
+    .MaquetacionContenidoAB{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, minmax(200px, auto));
+        grid-template-areas: 
+        "   Titulo      Titulo       "
+        "   Contenido   Contenido      "
+        "   Foto1       Foto1       ";
+        gap:2em;
+    }
+    .MaquetacionContenidoA{
+        grid-template-columns: 2.5fr 1fr 2fr;
+        grid-template-rows: repeat(3, minmax(200px, auto));
+        grid-template-areas: 
+        "   Principal   Principal       Foto1   "
+        "   Contenido   Contenido       Contenido   "
+        "   Contenido2  Contenido2      Foto2  "
+        ;
+        gap:2em;
+    }
+    .TextoContenedorA{
+        width:96%;
+        margin:0 auto;
+        padding:0;
+        border:0;
+    }
+    .TextoFinalMaquetacionA{
+        grid-area: Contenido2;
+        border:0;
+    }
+    #ContenedorImagenesCartaTermino{
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin-bottom: 2em;
+    }
+}
+@media(max-width:440px){
+    /* MaquetacionB */
+    .MaquetacionContenidoA{
+        grid-template-columns: 2.5fr 1fr 2fr;
+        grid-template-rows: repeat(4, minmax(100px, auto));
+        grid-template-areas: 
+        "   Principal   Principal       Foto1   "
+        "   Contenido   Contenido       Contenido   "
+        "   Contenido2  Contenido2      Contenido2  "
+        "   Foto2       Foto2           Foto2"
+        ;
+        gap:2em;
+    }
+    .Imagen2MaquetacionA{
+        justify-self: center;
+        align-self: center;
+        border-right:7px solid #AB66A6;
+    }
+    .ContenedorA{
+        width: 90%;
+        border-right:0px solid #AB66A6;
+    }
+    .TextoContenedorA{
+        font-size: 0.7em;
+        line-height: 20px;
+    }
+    .ContenedorQyA{
+        margin-right:1em;
+    }
+    #MainDescripcion{
+        margin: 0 1em 0 0.5em;
+    }
+    #TituloPresentacion{
+        font-size: 3.3em;
+    }
+
+}

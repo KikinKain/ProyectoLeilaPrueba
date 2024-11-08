@@ -1,0 +1,237 @@
+/* Tamaño de las imágenes */
+img {
+    width: 6em;
+    height: fit-content;
+}
+
+
+/*
+    #F9EDEE  BLANCO
+    #F0D0DB  MIMIPINK
+    #E3B1D1  PINKLAVANDER
+    #C471A1  SkyMagenta
+    #AB66A6  Lo mismo pero más morado
+*/
+
+
+/* Estilos del header */
+header {
+    background: #E3B1D1;
+    width: 100%;
+    height: 11.2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+/* Contenedores dentro del header */
+header #contenedor1,
+header #contenedor2 {
+    width: 35%;
+    height: auto; /* Ajuste automático de altura */
+    border: 0.4em dotted rgb(255, 255, 255);
+    border-radius: 1.5em;
+    font-size: 0.64em;
+    line-height: 0.8em;
+    text-align: center;
+    max-width: 80%;
+    min-width: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.8em;
+}
+
+/* Secciones dentro de los contenedores */
+header #contenedor1 a,
+header #contenedor2 a {
+    background: white;
+    color: #E3B1D1;
+    line-height: 1.6em;
+    border: 0.8em double #E3B1D1;
+    border-radius: 1.5em;
+}
+
+/* Navegación en el Contenedor 1 */
+header #contenedor1 #NavUno,
+header #contenedor2 #NavUno {
+    grid-area: 1 / 1 / 1 / 2;
+}
+
+header #contenedor1 #NavUno:hover,
+header #contenedor2 #NavUno:hover {
+    grid-area: 1 / 1 / 1 / -1;
+}
+
+header #contenedor1 #NavUno:hover ~ #NavDos,
+header #contenedor1 #NavUno:hover ~ #NavDos2,
+header #contenedor1 #NavUno:hover ~ #NavTres,
+header #contenedor1 #NavUno:hover ~ #NavCuatro {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    border: 0em double #E3B1D1;
+}
+
+/* Navegación en el Contenedor 1 (NavDos) */
+header #contenedor1 #NavDos {
+    grid-area: 1 / 2 / 1 / 3;
+}
+
+header #contenedor1 #NavDos:hover {
+    grid-area: 1 / 1 / 1 / -1;
+}
+
+header #contenedor1 #NavDos:hover ~ #NavUno,
+header #contenedor1 #NavDos:hover ~ #NavTres,
+header #contenedor1 #NavDos:hover ~ #NavCuatro {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    border: 0em double #E3B1D1;
+}
+
+/* Navegación en el Contenedor 2 (NavUno) */
+header #contenedor2 #NavUno {
+    grid-area: 1 / 1 / 1 / 2;
+}
+
+header #contenedor2 #NavUno:hover {
+    grid-area: 1 / 1 / 1 / -1;
+}
+
+header #contenedor2 #NavUno:hover ~ #NavDos2 {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    border: 0em double #E3B1D1;
+}
+
+/* Navegación en el Contenedor 2 (NavDos) */
+header #contenedor2 #NavDos2 {
+    grid-area: 1 / 2 / 1 / -1;
+}
+
+header #contenedor2 #NavDos2:hover {
+    grid-area: 1 / 1 / 1 / -1;
+}
+
+header #contenedor2 #NavDos2:hover ~ #NavUno {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    border: 0em double #E3B1D1;
+}
+
+/* Navegación en el Contenedor 1 (NavTres) */
+header #contenedor1 #NavTres {
+    grid-area: 1 / 3 / 1 / 4;
+}
+
+header #contenedor1 #NavTres:hover {
+    grid-area: 1 / 1 / 1 / -1;
+}
+
+header #contenedor1 #NavTres:hover ~ #NavUno,
+header #contenedor1 #NavTres:hover ~ #NavDos,
+header #contenedor1 #NavTres:hover ~ #NavCuatro {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    border: 0em double #E3B1D1;
+}
+
+/* Navegación en el Contenedor 1 (NavCuatro) */
+header #contenedor1 #NavCuatro {
+    grid-area: 1 / 4 / 1 / 5;
+}
+
+header #contenedor1 #NavCuatro:hover {
+    grid-area: 1 / 1 / 1 / -1;
+}
+
+header #contenedor1 #NavCuatro:hover ~ #NavUno,
+header #contenedor1 #NavCuatro:hover ~ #NavDos,
+header #contenedor1 #NavCuatro:hover ~ #NavTres {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    border: 0em double #E3B1D1;
+}
+
+header h1{
+    font-size: 4em;
+}
+
+header img{
+    width:6em;
+    height:fit-content;
+}
+
+/* Estilos del body */
+body {
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+
+@media (max-width: 431px) {
+    header h1{
+        font-size: 1em;
+    }
+    header #contenedor1,
+    header #contenedor2 {
+    width: 100%;
+    }
+    header img{
+        width:3em;
+    }
+    header{
+        flex-direction: column;
+        height: 13em;
+    }
+}
+@media (min-width: 432px) and (max-width: 1200px) {
+    header h1{
+        font-size: 1em;
+    }
+    header #contenedor1,
+    header #contenedor2 {
+    width: 100%;
+    }
+    header img{
+        width:5em;
+    }
+    header{
+        flex-direction: column;
+        height: 16em;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1700px) {
+    header h1{
+        font-size: 3em;
+    }
+    header #contenedor1,
+    header #contenedor2 {
+    width: 35%;
+    }
+    header img{
+        width:5em;
+    }
+    header{
+        height: 11.5em;
+    }
+}

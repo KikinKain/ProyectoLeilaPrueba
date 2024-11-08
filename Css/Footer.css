@@ -1,0 +1,42 @@
+footer{
+    background: #E3B1D1;
+    margin:0 auto;
+    width:50%;
+    height: 100%;
+    margin-bottom: 0em;
+    border-radius:50px;
+    padding:3em 3em 0em 3em;
+}
+footer ul li{
+    text-align: center;
+    padding:20px;
+    color:#AB66A6;
+    background-color: #F9EDEE ;
+    border-radius:30px;
+    font-size: 2em;
+    -webkit-text-stroke-width: .7px;
+    -webkit-text-stroke-color: #895285;
+    margin-bottom: 1em;
+}
+.IconosRedesSociales{
+    width:60px; 
+}
+footer ul{
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+footer a{
+    color:#AB66A6;
+}
+footer a:hover{
+    color:#ff0090;
+    background-color: #f9d2f7;
+
+}
+@media (max-width:900px){
+    footer{
+        width:80%;
+    }
+}

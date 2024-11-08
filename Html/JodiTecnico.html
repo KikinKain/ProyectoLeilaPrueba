@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JodiPoli</title>
+
+    <link rel="stylesheet" href="/Css/Cabezona.css">
+    <link rel="stylesheet" href="/Css/Footer.css">
+
+    <link rel="stylesheet" href="/Css/CssJodiTecnico.css">
+    <link rel="stylesheet" href="/Css/GridJodiTecnico.css">
+</head>
+<body>
+
+
+
+
+    <header>
+        <nav id="contenedor1">
+            <a href="/Index.html" id="NavUno"><p>Principal</p>
+                <img src="/Imagenes/SVG/Head_Principal.svg" alt="" class="ImagenHeader">
+            </a>
+            <a href="/Html/MApoli.html" id="NavDos"><p>MApoli</p>
+                <img src="/Imagenes/SVG/Head_MApoli.svg" alt="" class="ImagenHeader">
+            </a>
+            <a href="/Html/JodiTecnico.html" id="NavTres"><p>Joditecnico</p>
+                <img src="/Imagenes/SVG/Head_Joditecnico.svg" alt="" class="ImagenHeader">
+            </a>
+            <a href="/Html/PoliTramite.html" id="NavCuatro"><p>PoliTramites</p>
+                <img src="/Imagenes/SVG/Head_PoliTramite.svg" alt="" class="ImagenHeader">
+            </a>
+        </nav>
+
+        <h1>Proyecto Leila</h1>
+
+        <nav id="contenedor2">
+            <a href="/Html/User.html" id="NavUno"><p>User</p>
+                <img src="/Imagenes/SVG/Login_User.svg" alt="" class="ImagenHeader">
+            </a>
+            <a id="NavDos2"><p>datos del usuario</p>
+                <p>Dr.sexo</p>
+                <p>codigo: 221233358</p>
+            </a>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+    <div class="contenedor">
+        <div class="texto">1</div>
+
+        <div class="conversor">
+            <div class="JodiPoli">
+                <form id="presupuesto">
+                    <label for="Cantidad">¿Cuál es tu presupuesto?</label> <br>
+                    <input type="number" id="Cantidad" name="Cantidad">
+                    <button type="button" onclick="calcular()" class="botonconversor">Calcular</button>
+                </form>
+                <div id="resultado"></div>
+            </div>
+        </div>
+
+
+
+        <div class="nieve">
+            <img src="/Imagenes/JPG/tacos2.jpg" alt="Nieve">
+        </div>
+
+
+
+        <div>
+            <button type="button" class="botonesresstaurantes">VER</button>
+        </div>
+
+
+        <div>
+            <button type="button" class="botonesresstaurantes">hola</button>
+        </div>
+
+
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+    </div>
+
+
+
+    <script>
+        function calcular() {
+            var Cantidad = document.getElementById("Cantidad").value;
+            var resultado = document.getElementById("resultado");
+            var divs = document.querySelectorAll('.contenedor > div:not(.texto):not(.conversor)');
+            
+            // Mostrar los elementos que no se deben ocultar
+            document.querySelector('.texto').style.display = 'block';
+            document.querySelector('.conversor').style.display = 'block';
+            
+            // Ocultar todos los div
+            divs.forEach(function(div) {
+                div.style.display = 'none';
+            });
+            
+            // 
+            if (!Cantidad) {
+                resultado.innerHTML = "Dame un presupuesto.";
+            } else if (Cantidad <= 50) {
+                resultado.innerHTML = "Con ese presupuesto, puedes comprar una nieve en paleteria la michoacana.";
+                document.querySelector('.nieve').style.display = 'block';
+                var botones = document.querySelectorAll('.botonesresstaurantes');
+                botones.forEach(function(boton) {
+                    boton.parentElement.style.display = 'block';
+                });
+            } else if (Cantidad <= 100) {
+                resultado.innerHTML = "Con ese presupuesto, puedes comprar tacos.";
+                document.querySelector('.tacos').style.display = 'block';
+                var botones = document.querySelectorAll('.botonesresstaurantes');
+                botones.forEach(function(boton) {
+                    boton.parentElement.style.display = 'block';
+                });
+            } else {
+                resultado.innerHTML = "Con ese presupuesto, puedes comprar un platillo completo.";
+                var platillos = document.querySelectorAll('.platillo');
+                platillos.forEach(function(div) {
+                    div.style.display = 'block';
+                });
+            }
+        }
+    </script>
+
+<footer>
+    <ul style="list-style: none;">
+        <li>Sobre Nosotros</li>
+        <li>Preguntas Frecuentes</li>
+        <li>Ayuda</li>
+        <li><div><img src="/Imagenes/SVG/Instagram.svg" alt="" class="IconosRedesSociales"></div></li>
+    </ul>
+</footer>
+</body>
+</html>

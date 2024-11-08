@@ -1,0 +1,81 @@
+.ContenedorA{
+    background-image: linear-gradient( #AB66A6,  #AB66A6);
+    border-image-slice: 1;
+    background-repeat: no-repeat;
+    background-size: 3px 60%, calc(100% - 4px) 100%;
+    background-position: left center, 4px 0;
+    font-family: Ubuntu;
+    border-radius: 25px;
+    border-right:7px solid #AB66A6;
+}
+.MargenGrande{
+    font-family: DynaPuff;
+}
+.HipervinculoReporteB{
+    color: #cf55c7;
+}
+/*
+    Constancia
+*/
+
+.Imagen1MaquetacionA{
+    width:80%;
+}
+.Imagen2MaquetacionA{
+    width:80%;
+}
+.ContenedorPrincipalMaquetacionA{
+    display: flex;
+    flex-direction: column;
+}
+.ImagenContenidoEstilo{
+    border-left: 7px solid  #C471A1;
+    border-right: 7px solid  #C471A1;
+    border-radius: 25px;
+    width:400px;
+}
+#MaquetacionContenidoA{
+    margin:0 auto;
+    width:90%;
+}
+.ParrafoGrande{
+    font-size: 1em;
+}
+.TextoContenedorA{
+    text-align: justify;
+    font-size: 1.6em;
+    line-height: 50px;
+    margin-bottom: 2em;
+    border-left: 7px solid  #C471A1;
+    border-right: 7px solid  #C471A1;
+    border-radius: 25px;
+    padding:0 3em 0 3em;
+}
+.TituloTramite{
+    text-align: center;
+    font-size: 2.6em;
+    margin: 1em 0 1em 0;
+    width:90%;
+}
+.TextoFinalMaquetacionA{
+    border:0;
+}
+.TextoMedioMaquetacionA{
+    border-right:0;
+}
+/*
+    FIN         Constancia      FIN
+*/
+
+/*
+    INICIO      CARTA DE TÉRMINO        INICIO
+*/
+.ImgContenedor{
+    width:200px;
+}
+
+
+
+#ContenedorReporteBimestral{
+    transition:1s;
+}

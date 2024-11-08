@@ -1,0 +1,105 @@
+/*
+    #F9EDEE  BLANCO
+    #F0D0DB  MIMIPINK
+    #E3B1D1  PINKLAVANDER
+    #C471A1  SkyMagenta
+    #AB66A6  Lo mismo pero más morado
+*/
+
+*{
+    padding:0;
+    margin:0;
+}
+.dynapuff-DynaPuff {
+    font-family: "DynaPuff", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"width" 100;
+} 
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+body, html{
+    font-family: DynaPuff;
+    background-color: #F9EDEE;
+}
+
+main{
+    text-align: center;
+    width:80%;
+    margin:0 auto;
+    border-right:4px solid #AB66A6;
+    border-left:4px solid #AB66A6;
+    border-radius:100px;
+    background-color: #f7f3e5;
+}
+
+main h1{
+    font-size: 5em;
+    color:#AB66A6;
+}
+
+.TextoNosotros{
+    font-family: Ubuntu;
+    width: 80%;
+    text-align: justify;
+    font-size: 1.6em;
+    line-height: 55px;
+    color:#C471A1;
+    font-weight: 300;
+}
+b{
+    font-weight: 800;
+    font-size: larger;
+}
+main img{
+    border-right:10px solid #C471A1;
+    border-left:10px solid #C471A1;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.114);
+}
+.FotoAnfitriones{
+    width:90%;
+    margin-bottom: 3em;
+}
+#AcomodoFotos{
+    width:95%;
+    height:100%;
+}
+#FotoJuampa{
+    width:100%;
+} 
+#NuestrosNombres{
+    text-align: justify;
+    margin-bottom:2em;
+}
+#FotoConTexto{
+    width:80%;
+    margin:0 auto;
+}
+
+
+main a{
+    color:#AB66A6;
+}
+main a:hover{
+    color:#ff0090;
+    background-color: #F9EDEE;
+}
+
+@media (min-width:2000px){
+    .TextoNosotros{
+        font-size: 2em;
+    }
+}
+@media (min-width:2800px){
+    .TextoNosotros{
+        font-size: 3em;
+    }
+    b{
+        font-weight: 500;
+    }
+}

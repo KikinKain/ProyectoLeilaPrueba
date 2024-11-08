@@ -1,0 +1,184 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Color Palette
+    #F9EDEE - BLANCO
+    #F0D0DB - MIMIPINK
+    #E3B1D1 - PINKLAVANDER
+    #C471A1 - SkyMagenta
+    #AB66A6 - Lo mismo pero más morado
+*/
+
+
+body {
+    background: #F9EDEE;
+}
+
+/* Aside (Menu de Navegación y Descripción Breve) */
+aside {
+    background: #F9EDEE;
+    width: 45%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #AB66A6;
+    padding: 1em;
+}
+
+aside article {
+    background: #F9EDEE;
+    width: 80%;
+    height: fit-content;
+    padding: 1em;
+    margin: 2em 0;
+    border-radius: 1.5em;
+    border: #AB66A6 0.2em solid;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #AB66A6;
+}
+
+aside article section {
+    text-align: center;
+    width: 50%;
+    background-color: #AB66A6;
+    padding: 1em;
+    border-radius: 1em;
+    border: #F9EDEE double 1em;
+    color: #F9EDEE;
+}
+
+aside article section ul {
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+    border: 0;
+    width: 100%;
+    list-style-type: none;
+}
+
+aside article section:hover ul {
+    overflow: visible;
+    height: fit-content;
+    visibility: visible;
+    border: 0;
+}
+
+aside article section ul li {
+    background-color: #F9EDEE;
+    border: 2px solid #F0D0DB;
+    transition: 0.5s;
+    padding: 0.1em;
+    border-radius: 0.5em;
+    color: #AB66A6;
+    width: 100%;
+    margin: 1em 0;
+}
+
+aside article section ul li:hover {
+    background: #F0D0DB;
+    color: #C471A1;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+/* Main (Referencia y Localización) */
+main {
+    background: #F9EDEE;
+    width: 50%;
+    height: fit-content;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #AB66A6;
+}
+
+main article {
+    background: #F9EDEE;
+    width: 90%;
+    height: fit-content;
+    padding: 1em;
+    border-radius: 1.5em;
+    border: #AB66A6 0.2em solid;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #AB66A6;
+}
+
+main article section {
+    background: #F9EDEE;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1.5em;
+    border: #AB66A6 0.2em solid;
+    padding: 1em;
+    font-size: 1em;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #AB66A6;
+}
+
+main article section h1 {
+    width: 100%;
+    height: fit-content;
+}
+
+main article section img {
+    width: 30em;
+    height: fit-content;
+    border-radius: 1em;
+}
+
+/* Descriptions */
+#descripcion1,
+#descripcion2,
+#descripcion3 {
+    text-align: center;
+}
+
+@media (max-width: 431px) {
+    aside{
+        width: 100%;
+    }
+    main {
+        width: 100%;
+    }
+    main article section img {
+        width: 10em;
+    }
+}
+
+@media (min-width: 432px) and (max-width: 1200px) {
+    aside{
+        width: 100%;
+    }
+    main {
+        width: 100%;
+    }
+    main article section img {
+        width: 20em;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1700px) {
+    aside{
+        width: 40%;
+    }
+    main {
+        width: 45%;
+    }
+    main article section img {
+        width: 20em;
+    }
+}

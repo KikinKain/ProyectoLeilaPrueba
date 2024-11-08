@@ -1,0 +1,160 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px repeat(2, minmax(300px, auto)) minmax(150px, auto);
+    grid-template-areas: 
+    "   Header    Header "
+    "   Main    Main "
+    "   Main    Main "
+    "   Footer  Footer"
+    ;
+    gap:5em;
+}
+header{
+    grid-area: Header;
+}
+main{
+    grid-area: Main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px repeat(2, minmax(300px, auto));
+    grid-template-areas: 
+    "   Titulo          Titulo "
+    "   Descripcion     Foto1 "
+    "   Foto2           Descripcion2 "
+    ;
+    gap:2em;
+    justify-items:center;
+    align-items: center;
+}
+main h1{
+    grid-area: Titulo;
+}
+#DescripcionNosotros{
+    grid-area: Descripcion;
+    align-self: start;
+}
+#DescripcionN2{
+    grid-area: Descripcion2;
+    justify-self: start;
+    align-self: start;
+}
+
+#AcomodoFotos{
+    grid-area: Foto1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "   FotoKikin   FotoJuampa  "
+    "   FotoAdrian  FotoJuampa  "
+    ;
+    gap:2em;
+    justify-items: center;
+    align-items: center;
+}
+#FotoKikin{
+    grid-area: FotoKikin;
+}
+#FotoJuampa{
+    grid-area: FotoJuampa;
+    align-self: center;
+}
+#FotoAdrian{
+    grid-area: FotoAdrian;
+}
+#FotoConTexto{
+    grid-area: Foto2;
+    align-self: start;
+}
+
+footer{
+    grid-area: Footer;
+}
+
+@media (max-width:1440px){
+    #AcomodoFotos{
+        width:fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap:0;
+    }
+    #DescripcionNosotros{
+        justify-self: center;
+        align-self: start;
+    } 
+    .FotoAnfitriones, #FotoJuampa{
+        width:80%;
+        margin:0 0 1em 0;
+    }
+    main{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 150px repeat(2, minmax(300px, auto));
+        grid-template-areas: 
+        "   Titulo          Titulo          Titulo "
+        "   Descripcion     Descripcion     Foto1 "
+        "   Foto2           Descripcion2    Descripcion2"
+        ;
+    }
+}
+@media (max-width:1200px){
+    #AcomodoFotos{
+        width:fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    #FotoJuampa{
+        width:90%;
+        margin-right:0;
+    }
+}
+@media (max-width:900px){
+    main{
+        width:90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 150px minmax(300px, auto) minmax(300px, auto) repeat(2, minmax(300px, auto));
+        grid-template-areas: 
+        "   Titulo          Titulo  "
+        "   Descripcion     Descripcion     "
+        "   Foto1           Foto1   "
+        "   Descripcion2    Descripcion2    "
+        "   Foto2           Foto2"
+        ;
+    }
+    main h1{
+        font-size: 3em;
+    }
+    .TextoNosotros{
+        font-size:1.4em;
+    }
+    #AcomodoFotos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "   FotoKikin   FotoJuampa  "
+        "   FotoAdrian  FotoJuampa  "
+        ;
+    } 
+    .FotoAnfitriones, #FotoJuampa{
+        width:55%;
+    }
+    #DescripcionN2{
+        justify-self: center;
+    } 
+    #FotoKikin{
+        grid-area: FotoKikin;
+    }
+    #FotoAdrian{
+        grid-area: FotoAdrian;
+    }
+    #FotoJuampa{
+        grid-area: FotoJuampa;
+        width:90%;
+        margin-right:2px;
+    }
+
+}
